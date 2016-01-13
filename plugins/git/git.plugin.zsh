@@ -210,6 +210,7 @@ alias gup='git pull --rebase'
 alias gupv='git pull --rebase -v'
 
 alias grum='git pull --rebase upstream master'
+alias grom='git pull --rebase origin master'
 
 alias gvt='git verify-tag'
 
