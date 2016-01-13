@@ -176,7 +176,8 @@ alias grbi='git rebase -i'
 alias grbm='git rebase master'
 alias grbs='git rebase --skip'
 alias grh='git reset HEAD'
-alias grhh='git reset HEAD --hard'
+# alias grhh='git reset HEAD --hard'
+
 alias grmv='git remote rename'
 alias grrm='git remote remove'
 alias grset='git remote set-url'
@@ -207,7 +208,8 @@ alias gunignore='git update-index --no-assume-unchanged'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 alias gup='git pull --rebase'
 alias gupv='git pull --rebase -v'
-alias glum='git pull upstream master'
+
+alias grum='git pull --rebase upstream master'
 
 alias gvt='git verify-tag'
 
