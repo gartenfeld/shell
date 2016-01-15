@@ -88,30 +88,30 @@ alias gfo='git fetch origin'
 
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
-ggf() {
-[[ "$#" != 1 ]] && local b="$(git_current_branch)"
-git push --force origin "${b:=$1}"
-}
-compdef _git ggf=git-checkout
-ggl() {
-if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
-git pull origin "${*}"
-else
-[[ "$#" == 0 ]] && local b="$(git_current_branch)"
-git pull origin "${b:=$1}"
-fi
-}
+# ggf() {
+# [[ "$#" != 1 ]] && local b="$(git_current_branch)"
+# git push --force origin "${b:=$1}"
+# }
+# compdef _git ggf=git-checkout
+# ggl() {
+# if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
+# git pull origin "${*}"
+# else
+# [[ "$#" == 0 ]] && local b="$(git_current_branch)"
+# git pull origin "${b:=$1}"
+# fi
+# }
 compdef _git ggl=git-checkout
-alias ggpull='git pull origin $(git_current_branch)'
+# alias ggpull='git pull origin $(git_current_branch)'
 compdef _git ggpull=git-checkout
-ggp() {
-if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
-git push origin "${*}"
-else
-[[ "$#" == 0 ]] && local b="$(git_current_branch)"
-git push origin "${b:=$1}"
-fi
-}
+# ggp() {
+# if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
+# git push origin "${*}"
+# else
+# [[ "$#" == 0 ]] && local b="$(git_current_branch)"
+# git push origin "${b:=$1}"
+# fi
+# }
 compdef _git ggp=git-checkout
 alias ggpush='git push origin $(git_current_branch)'
 compdef _git ggpush=git-checkout
