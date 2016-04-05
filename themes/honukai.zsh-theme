@@ -7,7 +7,8 @@
 # Mar 2013 ys
 
 # Caret Symbol
-CARET="»"
+CARET="🐶 "
+# »
 
 # Machine name.
 function box_name {
@@ -49,16 +50,15 @@ ys_hg_prompt_info() {
 }
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
-PROMPT="
-%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+PROMPT="%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
 %{$fg[cyan]%}%n \
 %{$FG[244]%}at \
 %{$fg[green]%}$(box_name) \
 %{$FG[244]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
-${git_info} \
-%{$FG[244]%} [%{$(date +%H:%M)%}]
+${git_info}\
+%{$FG[244]%} $(date +%H:%M)
 %{$terminfo[bold]$fg[white]%}$CARET %{$reset_color%}"
 
 if [[ "$USER" == "root" ]]; then
@@ -71,6 +71,6 @@ PROMPT="
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
 ${git_info} \
-%{$FG[244]%} [%{$(date +%H:%M)%}]
+%{$FG[244]%} $(date +%H:%M)
 %{$terminfo[bold]$fg[red]%}$CARET %{$reset_color%}"
 fi
